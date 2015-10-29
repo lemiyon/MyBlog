@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cdg.ultraViolet.mapper.BoardMapper">
+	<insert id="insertBoard" parameterType="board">
+	INSERT board
+	SET
+		board_no = #{boardNo}
+		,title = #{title}
+		,contents = #{contents}
+		,user_no = #{userno}
+		,create_no = #{createNo}
+		,update_no = #{updateNo}
+	</insert>
+</mapper>
