@@ -14,7 +14,7 @@
 		<param-value>classpath:/spring/applicationContext-root.xml</param-value>
 	</context-param>
 	
-	<listener>
+	<listener> <!--  발생하는 이벤트를 수신해 처리하는 리스너로 넘겨줌. -->
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
 	

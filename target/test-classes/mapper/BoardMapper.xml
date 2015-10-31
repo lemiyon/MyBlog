@@ -8,8 +8,28 @@
 		board_no = #{boardNo}
 		,title = #{title}
 		,contents = #{contents}
-		,user_no = #{userno}
-		,create_no = #{createNo}
-		,update_no = #{updateNo}
+		,user_no = #{userNo}
+		,create_date = NOW()
+		,update_date = NOW()
 	</insert>
+	
+	<select id="selectBoardList" resultType="board">
+	SELECT *
+	FROM board
+	</select>
+	
+	<update id="updateBoard" parameterType="board">
+	UPDATE board
+	SET 
+		title = #{title}
+		,contents = #{contents}
+		, update_date = NOW()
+	WHERE
+		board_no = #{boardNo}
+	</update>
+	
+	<delete id="deleteBoard" parameterType="int">
+	DELETE FROM board
+	WHERE board_no = #{boardNo}
+	</delete>
 </mapper>

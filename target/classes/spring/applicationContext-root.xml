@@ -6,10 +6,12 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+	
+	<!-- 해당 어노테이션이 붙어있는 모든 서블릿들을 컴파일 해 객체를 생성해주는 역 -->
 	<context:component-scan base-package="com.cdg.ultraViolet">
 		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller" />
 	</context:component-scan>
 	
-	<import resource="class path:/spring/applicationContext-dao-config.xml"/>
+	<import resource="classpath:/spring/applicationContext-dao-config.xml"/>
 	
 </beans>
