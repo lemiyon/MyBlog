@@ -3,10 +3,10 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
 
-	<display-name>skeleton</display-name>
+	<display-name>ultraViolet</display-name>
 
 	<welcome-file-list><!-- 서버에 들어왔을 떄 가장 먼저 로딩되는 화면용 -->
-		<welcome-file>index.jp</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
 	</welcome-file-list>
 
 	<context-param><!-- 웹 어플리케이션전반에서 공유되는 속성을 등록하는 부분-->

@@ -9,4 +9,5 @@ public interface BoardMapper {
 	public List<Board> selectBoardList();
 	public void updateBoard(Board board);
 	public void deleteBoard(int boardNo);
+	public Board selectDetail(long boardNo);
 }

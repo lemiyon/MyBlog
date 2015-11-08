@@ -11,11 +11,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
  
 
 @Controller
-public class MainControllet {
+public class MainController {
 
 	@RequestMapping("/index")
 	public String index()
 	{
+		BoardController controller = new BoardController();
 		return "index";
 	}
 }
