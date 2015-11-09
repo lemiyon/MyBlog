@@ -18,6 +18,7 @@
 	FROM board
 	</select>
 	
+	<!-- 주의!! 파라미터 타입은 반드시 넘기는 값과 동일하게 할 것! 자동 캐스팅 된다고 int로 넣었다가 2시간삽질함. -->
 	<select id="selectDetail" parameterType="long" resultType="board">
 	SELECT *
 	FROM board

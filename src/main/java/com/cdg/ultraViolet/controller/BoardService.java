@@ -9,4 +9,6 @@ public interface BoardService {
 	public void write(Board board);
 	public Board getDetail(long boardNo);
 	public List<Board> getList();
+	public void update(Board board);
+	public void delete(long boardNo);
 }

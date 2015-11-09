@@ -4,7 +4,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Writing >_&lt; </title>
+<!-- &lt는 <이다 -->
+<title>Writing >_&lt;</title>
 </head>
 
 <body>
@@ -13,12 +14,13 @@
 		<table>
 			<tr>
 				<td>제목</td>
-				<td><input type="text" name="title"></td>
+				<td><input type="text" name="title" value="${board.title}"></td>
 			<tr>
-
-				<tr>
-		<td>내용</td>
-				<td><textarea rows="20" cols="30" name="contents"></textarea></td></table>
+			<tr>
+				<td>내용</td>
+				<td><textarea rows="20" cols="30" name="contents">${board.contents}</textarea></td>
+		</table>
+		<input type="hidden" name="boardNo" value="${board.boardNo}">
 		<input type="submit" value="submit">
 	</form>
 </body>

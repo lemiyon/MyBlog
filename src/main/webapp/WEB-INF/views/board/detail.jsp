@@ -11,5 +11,19 @@
 <h2>글 상세 보기</h2>
 	<h3>${board.title}</h3>
 	${board.contents} 
+
+<!-- Post라고 method를 명시를 안해주면 get으로 넘어간다. -->
+
+<form action="./writeForm" method="post">
+	<input type="hidden" name="boardNo" value="${board.boardNo}">
+	<input type="submit" id="btnSubmit" value="수정">
+</form>
+
+
+<form action="./delete" method="post">
+<!-- boardController에 존재하는 메소드 시그니처의 매개변수 명이랑 넘길 값 name을 일치시켜줘야 illegalStat오류가 안난다. -->
+	<input type="hidden" name="boardNo" value="${board.boardNo}">
+	<input type="submit" id="btnSubmit" value="삭제">
+	</form>
 </body>
 </html>

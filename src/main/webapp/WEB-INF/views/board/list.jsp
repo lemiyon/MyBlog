@@ -14,7 +14,7 @@
 			<td>제목</td>
 			<td>내용</td>
 			<td>작성자</td>
-			<td>조회수</td>>
+			<td>조회수</td>
 		</tr>
 		
 		<c:forEach items="${boardList}" var="board">
@@ -22,13 +22,12 @@
 				<td><a href="./detail?boardNo=${board.boardNo}">${board.title}</a></td>
 				<td>${board.contents}</td>
 				<td>${board.userNo}</td>
-				<td>${board.hit}</td>>
+				<td>${board.hit}</td>
 		</tr>
 		</c:forEach>
 	</table>
 	<input type="submit" id="btnSubmit" value="submit"
 		onclick="location.href='./writeForm'">
-	</form>
 
 
 </body>

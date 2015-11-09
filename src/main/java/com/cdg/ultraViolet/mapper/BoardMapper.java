@@ -8,6 +8,6 @@ public interface BoardMapper {
 	public void insertBoard(Board board);
 	public List<Board> selectBoardList();
 	public void updateBoard(Board board);
-	public void deleteBoard(int boardNo);
+	public void deleteBoard(long boardNo);
 	public Board selectDetail(long boardNo);
 }

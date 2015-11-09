@@ -16,6 +16,7 @@ public class BoardServiceImpl implements BoardService {
 	@Autowired
 	private BoardMapper boardMapper;
 
+	//새 글을 생성한다. 
 	public void write(Board board) {
 		
 		long boardNo = makeBoardNo();
@@ -25,6 +26,16 @@ public class BoardServiceImpl implements BoardService {
 		boardMapper.insertBoard(board);
 	}
 
+	//기존 글을 업데이트 한다.
+	public void update(Board board)
+	{
+		boardMapper.updateBoard(board);
+	}
+	//기존글을 지운
+	public void delete(long boardNo)
+	{
+		boardMapper.deleteBoard(boardNo);
+	}
 	// 게시판 글번호를 생성한다.
 	public long makeBoardNo() {
 		return Long.parseLong(DateFormatUtils.format(new Date(), "yyMMddhhmm"));
@@ -40,6 +51,8 @@ public class BoardServiceImpl implements BoardService {
 	{
 		return boardMapper.selectDetail(boardNo);
 	}
+
+
 
 
 }
