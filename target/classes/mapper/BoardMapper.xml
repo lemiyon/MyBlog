@@ -19,7 +19,7 @@
 	</select>
 	
 	<!-- 주의!! 파라미터 타입은 반드시 넘기는 값과 동일하게 할 것! 자동 캐스팅 된다고 int로 넣었다가 2시간삽질함. -->
-	<select id="selectDetail" parameterType="long" resultType="board">
+	<select id="selectDetail" parameterType="BigInteger" resultType="board">
 	SELECT *
 	FROM board
 	WHERE
@@ -36,8 +36,16 @@
 		board_no = #{boardNo}
 	</update>
 	
-	<delete id="deleteBoard" parameterType="long">
+	<delete id="deleteBoard" parameterType="BigInteger">
 	DELETE FROM board
 	WHERE board_no = #{boardNo}
 	</delete>
+	
+	<update id="increaseHit" parameterType="BigInteger">
+		UPDATE board
+	SET 
+		hit = hit + 1
+	WHERE
+		board_no = #{boardNo}
+	</update>
 </mapper>

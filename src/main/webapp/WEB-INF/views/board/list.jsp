@@ -1,9 +1,17 @@
+<% response.setHeader("Pragma", "no-cache"); //HTTP 1.0
+response.setHeader("Cache-Control", "no-cache"); //HTTP 1.1
+response.setHeader("Cache-Control", "no-store"); //HTTP 1.1
+response.setDateHeader("Expires", 0L); // Do not cache in proxy server
+ %>
+ <!-- 서버 사이드 스크립트는 가장 위에서 돌리는 게 좋 -->
+<!-- 여기의 브라우저로는 안돌아가고크롬에서는 잘 돌아간다. 브라우저의 백 버튼이 history.back()이 아닐 수도 있따. -->
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+ 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<head>
+<head>  
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Welcome to UltraVioloet</title>
 </head>

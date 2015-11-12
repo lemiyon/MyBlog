@@ -1,5 +1,6 @@
 package com.cdg.ultraViolet.domain;
 
+import java.math.BigInteger;
 import java.sql.Date;
 
 import lombok.Data;
@@ -7,7 +8,7 @@ import lombok.Data;
 @Data
 public class Board {
 
-	private long boardNo;
+	private BigInteger boardNo;
 	private String contents;
 	private String title;
 	private int userNo;

@@ -1,5 +1,6 @@
 package com.cdg.ultraViolet.controller;
 
+import java.math.BigInteger;
 import java.util.Date;
 import java.util.List;
 
@@ -20,7 +21,7 @@ public class BoardServiceImpl implements BoardService {
 	public void write(Board board) {
 		
 		long boardNo = makeBoardNo();
-		board.setBoardNo(boardNo);
+		board.setBoardNo(BigInteger.valueOf(boardNo));
 		board.setUserNo(0);
 		
 		boardMapper.insertBoard(board);
@@ -34,7 +35,7 @@ public class BoardServiceImpl implements BoardService {
 	//기존글을 지운
 	public void delete(long boardNo)
 	{
-		boardMapper.deleteBoard(boardNo);
+		boardMapper.deleteBoard(BigInteger.valueOf(boardNo));
 	}
 	// 게시판 글번호를 생성한다.
 	public long makeBoardNo() {
@@ -49,7 +50,12 @@ public class BoardServiceImpl implements BoardService {
 	
 	public Board getDetail(long boardNo)
 	{
-		return boardMapper.selectDetail(boardNo);
+		return boardMapper.selectDetail(BigInteger.valueOf(boardNo));
+	}
+
+	public void increaseHit(long boardNo) {
+		// TODO Auto-generated method stub
+		boardMapper.increaseHit(BigInteger.valueOf(boardNo));
 	}
 
 

@@ -20,7 +20,7 @@
 				<td>내용</td>
 				<td><textarea rows="20" cols="30" name="contents">${board.contents}</textarea></td>
 		</table>
-		<input type="hidden" name="boardNo" value="${board.boardNo}">
+		<input type="hidden" name="boardNo" value="${board.boardNo}" >
 		<input type="submit" value="submit">
 	</form>
 </body>
