@@ -2,6 +2,7 @@ package com.cdg.ultraViolet.mapper;
 
 import static org.junit.Assert.assertTrue;
 
+import java.math.BigInteger;
 import java.util.List;
 
 import org.apache.commons.collections.CollectionUtils;
@@ -29,7 +30,7 @@ public class BoardMapperTest {
 	public void test() throws Exception {
 
 		Board board = new Board();
-		board.setBoardNo(1);
+		board.setBoardNo(BigInteger.ZERO);
 		board.setContents("hello");
 		board.setTitle("hello");
 		board.setUserNo(0);
@@ -43,14 +44,14 @@ public class BoardMapperTest {
 	}
 	public void testDeleteBoard() throws Exception {
 		
-		mapper.deleteBoard(0);
+		mapper.deleteBoard(BigInteger.ZERO);
 
 	}
 
 
 	public void testUpdateBoard() throws Exception {
 		Board board = new Board();
-		board.setBoardNo(0);
+		board.setBoardNo(BigInteger.ZERO);
 		board.setContents("hi update");
 		board.setTitle("hi test");
 		
